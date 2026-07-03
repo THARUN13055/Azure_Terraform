@@ -16,3 +16,4 @@ module "virtual-subnet" {
   virtual_network_name = module.virtual-network.vnet-name
   subnets              = local.subnets
 }
+

@@ -52,3 +52,58 @@ locals {
     }
   }
 }
+
+# Route Tables
+locals {
+
+  route_tables = {
+
+    public = {
+      name = "public-route-table"
+    }
+
+    private = {
+      name = "private-route-table"
+    }
+
+  }
+
+}
+# Associate Route Tables
+locals {
+
+  subnet_route_associations = {
+
+    public_frontend_1 = {
+      subnet_key = "public_frontend_1"
+      route_key  = "public"
+    }
+
+    public_frontend_2 = {
+      subnet_key = "public_frontend_2"
+      route_key  = "public"
+    }
+
+    private_backend_1 = {
+      subnet_key = "private_backend_1"
+      route_key  = "private"
+    }
+
+    private_backend_2 = {
+      subnet_key = "private_backend_2"
+      route_key  = "private"
+    }
+
+    private_database_1 = {
+      subnet_key = "private_database_1"
+      route_key  = "private"
+    }
+
+    private_database_2 = {
+      subnet_key = "private_database_2"
+      route_key  = "private"
+    }
+
+  }
+
+}
